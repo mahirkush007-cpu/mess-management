@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+    <title>Mess Management System</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body>
+  <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf3] px-10 py-3">
+            <div class="flex items-center gap-4 text-[#0e141b]">
+                <div class="size-4">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z" fill="currentColor"></path>
+                    </svg>
+                </div>
+                <h2 class="text-[#0e141b] text-lg font-bold leading-tight tracking-[-0.015em]">Mess Management System</h2>
+            </div>
+        <div class="flex flex-1 justify-end gap-8">
+          <div class="flex items-center gap-9">
+            <a class="text-[#111418] text-sm font-medium leading-normal" href="dash.html">Dashboard</a>
+            <a class="text-[#111418] text-sm font-medium leading-normal" href="user.html">Users</a>
+            <a class="text-[#111418] text-sm font-medium leading-normal" href="report.html">Reports</a>
+            <a class="text-[#111418] text-sm font-medium leading-normal" href="feedback.html">Feedback</a>
+            <a class="text-[#111418] text-sm font-medium leading-normal" href="meals.html">Meals</a>
+          </div>
+          
+          <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+            style='background-image: url("https://cdn.usegalileo.ai/stability/1b9d6ca3-ecdf-44be-aa9d-e335ae0cba16.png");'>
+          </div>
+        </div>
+      </header>
+            <div class="px-40 flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <div class="flex flex-wrap justify-between gap-3 p-4">
+                        
+                        <p class="text-[#0e141b] tracking-light text-[32px] font-bold leading-tight min-w-72 mt-5">Menu</p>
+
+                        <!-- Day Selection Dropdown -->
+                        <div class="text-[#0e141b] tracking-light text-[32px] font-bold leading-tight pb-[13px] pt-4">
+                            <label for="day-selector" class="text-[#0e141b] tracking-light text-[20px] font-bold leading-tight tracking-[0.015em] mr-0">Choose Day:</label>
+                            <select id="day-selector" class="border rounded-lg p-2">
+                                <option value="monday">Monday</option>
+                                <option value="tuesday">Tuesday</option>
+                                <option value="wednesday">Wednesday</option>
+                                <option value="thursday">Thursday</option>
+                                <option value="friday">Friday</option>
+                                <option value="saturday">Saturday</option>
+                                <option value="sunday">Sunday</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="pb-3">
+                        <div class="flex border-b border-[#d0dbe7] px-4 gap-8">
+                            <a class="flex flex-col items-center justify-center border-b-[3px] border-b-[#1980e6] text-[#0e141b] pb-[13px] pt-4" href="dash.html">
+                                <p class="text-[#0e141b] text-sm font-bold leading-normal tracking-[0.015em]">Breakfast</p>
+                            </a>
+                            <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#4e7397] pb-[13px] pt-4" href="lunch.html">
+                                <p class="text-[#4e7397] text-sm font-bold leading-normal tracking-[0.015em]">Lunch</p>
+                            </a>
+                            <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#4e7397] pb-[13px] pt-4" href="dinner.html">
+                                <p class="text-[#4e7397] text-sm font-bold leading-normal tracking-[0.015em]">Dinner</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4" id="menu-grid">
+                        <div class="flex flex-col gap-3 pb-3">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl" style='background-image: url("https://cdn.usegalileo.ai/stability/389f450e-bf45-4d0b-9838-43f8b84cb985.png");'></div>
+                            <div><p id="meal-1" class="text-[#0e141b] text-base font-medium leading-normal">Pancakes</p></div>
+                        </div>
+                        <div class="flex flex-col gap-3 pb-3">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl" style='background-image: url("https://cdn.usegalileo.ai/stability/603566c9-50ab-4dcf-9be1-dc1a7999fdba.png");'></div>
+                            <div><p id="meal-2" class="text-[#0e141b] text-base font-medium leading-normal">Sandwich</p></div>
+                        </div>
+                        <div class="flex flex-col gap-3 pb-3">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl" style='background-image: url("https://cdn.usegalileo.ai/stability/804e1d07-4959-46a8-b020-90443ffc7b89.png");'></div>
+                            <div><p id="meal-3" class="text-[#0e141b] text-base font-medium leading-normal">Omelette</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Function to fetch and display meals for the selected day and meal type
+        async function updateMenu() {
+            const selectedDay = document.getElementById("day-selector").value;
+            try {
+                const response = await fetch('/get_meals', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ day: selectedDay, meal_type: 'breakfast' })
+                });
+
+                if (!response.ok) throw new Error(`Error: ${response.statusText}`);
+                
+                const data = await response.json();
+                if (data.menu) {
+                    // Update the meal names dynamically
+                    document.getElementById("meal-1").textContent = data.menu[0]; // First meal
+                    document.getElementById("meal-2").textContent = data.menu[1]; // Second meal
+                    document.getElementById("meal-3").textContent = data.menu[2]; // Third meal
+                } else {
+                    console.error("No menu data found:", data);
+                    alert("No meals available for this day.");
+                }
+            } catch (error) {
+                console.error("Failed to load meals:", error);
+                alert("Failed to load meals. Please try again later.");
+            }
+        }
+
+        // Update menu when the page loads or the day is changed
+        window.onload = updateMenu;
+        document.getElementById("day-selector").addEventListener("change", updateMenu);
+    </script>
+  
+</body>
+</html>
